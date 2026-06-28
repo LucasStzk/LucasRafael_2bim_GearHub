@@ -1,35 +1,118 @@
-<header>
-    <h1>GearHub</h1>
-</header>
-<nav>
-    <button onclick="buscarCategorias()">
-        Categorias
-    </button>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-    <button onclick="buscarProdutos()">
-        Produtos
-    </button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GearHub</title>
 
-    <button onclick="buscarMouses()">
-        Mouses
-    </button>
-</nav>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-<main>
-<!--
-    <section>
-        <img src="imagens/mouse.jpg">
-        <img src="imagens/teclado.jpg">
-    </section>
--->
-    <section id="resultado">
+<body>
 
-    </section>
+    <header>
 
-</main>
+        <div class="logo">
+            <h1>🎮 GearHub</h1>
+            <p>Os melhores periféricos gamer</p>
+        </div>
 
-<footer>
-    GearHub - Todos os direitos reservados &copy; 2026
-</footer>
-<script src="script.js"></script>
-<link rel="stylesheet" href="style.css">
+        <div class="acoesTopo">
+
+            <button class="btnTopo" onclick="buscarCategorias()">
+                Categorias
+            </button>
+
+            <button class="btnTopo" onclick="buscarProdutos()">
+                Produtos
+            </button>
+
+            <button class="btnTopo" onclick="buscarMouses()">
+                Mouses
+            </button>
+
+            <button id="btnCarrinho" onclick="abrirCarrinho()">
+                🛒 Carrinho
+                <span id="qtdCarrinho">0</span>
+            </button>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section id="resultado" class="cards">
+
+      
+
+        </section>
+
+    </main>
+
+
+
+    <div id="carrinho" class="janela">
+
+        <div class="cabecalhoCarrinho">
+
+            <h2>🛒 Meu Carrinho</h2>
+
+            <button class="fechar" onclick="fecharCarrinho()">
+                ✖
+            </button>
+
+        </div>
+
+        <div id="listaCarrinho">
+
+        </div>
+
+        <hr>
+
+        <div class="rodapeCarrinho">
+
+            <h3>
+                Total:
+                <span id="totalCompra">
+                    R$ 0,00
+                </span>
+            </h3>
+
+            <div class="botoesCarrinho">
+
+                <button class="btnLimpar" onclick="limparCarrinho()">
+                    Limpar Carrinho
+                </button>
+
+                <button class="btnComprar" onclick="confirmarCompra()">
+                    Finalizar Compra
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="overlay" onclick="fecharCarrinho()"></div>
+
+    <footer>
+
+        <p>
+            GearHub © 2026
+        </p>
+
+        <p>
+            Desenvolvido por Lucas Rafael (Bigas)
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
