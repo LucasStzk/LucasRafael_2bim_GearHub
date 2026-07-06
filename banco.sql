@@ -35,3 +35,15 @@ VALUES
 ('Cloud Stinger', 'HyperX', 199.90, 4),
 ('C920', 'Logitech', 299.90, 7),
 ('DualShock 4', 'Sony', 249.90, 8);
+ALTER TABLE produtos
+ADD COLUMN imagem VARCHAR(100);
+UPDATE produtos SET imagem='dragonfly.jpg' WHERE id=1;
+UPDATE produtos SET imagem='m900.jpg' WHERE id=2;
+UPDATE produtos SET imagem='g203.jpg' WHERE id=3;
+UPDATE produtos SET imagem='kumara.jpg' WHERE id=4;
+UPDATE produtos SET imagem='k617.jpg' WHERE id=5;
+UPDATE produtos SET imagem='pkcontrol.jpg' WHERE id=6;
+UPDATE produtos SET imagem='g240.jpg' WHERE id=7;
+UPDATE produtos SET imagem='cloud.jpg' WHERE id=8;
+UPDATE produtos SET imagem='c920.jpg' WHERE id=9;
+UPDATE produtos SET imagem='dualshock4.jpg' WHERE id=10;
