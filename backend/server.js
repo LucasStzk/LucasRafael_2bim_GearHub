@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require('express');
 const cors = require('cors');
 const pool = require('./db');
@@ -32,6 +33,5 @@ app.get('/produtos/categoria/:id', async (req, res) => {
     res.json(resultado.rows);
 });
 
-app.listen(3000, () => {
-    console.log('Servidor rodando');
-});
+app.listen(process.env.PORT,() => {
+    console.log(`Servidor rodando na porta $ {process.env.PORT}`)});
